@@ -1,0 +1,17 @@
+--AoC 2021 1.1
+import sys
+
+input = sys.stdin.readlines()
+
+counterOfIncreasing = 0
+
+lastmeasurement = -1
+
+for measurement in input:
+	if lastmeasurement == -1:
+		lastmeasurement = int(measurement)
+	elif measurement > lastmeasurement: 
+		counterOfIncreasing += 1 
+	lastmeasurement = int(measurement) 
+
+print(counterOfIncreasing) 
